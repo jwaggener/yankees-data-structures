@@ -1,0 +1,21 @@
+H Hits
+HR Homeruns
+BA Batting Average
+RBI Runs Batted In
+WAR Wins Above Replacement
+SLG Slugging
+OBP On Base Percentage
+
+courtesy https://www.baseball-reference.com/players/s/sanchga02.shtml
+September 24, 2019
+
+
+1 - make a card for a player that shows the photo and their name
+
+2 - put them on the page side-by-side. Simply make it responsive. Use flex if need be.
+
+3 - make the list a horizontally scrollable list. to do this, you can add more players or double up
+
+4 - make a little menu that's going to have the data structure names - LL, BT, BST, etc
+
+5 - Enhance the card with a slideout with a scrollable list of all the stats

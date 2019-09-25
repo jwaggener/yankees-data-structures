@@ -1,0 +1,31 @@
+.baseball-card {
+  @include box-shadow(3px, 3px, 8px, 0, $yankees-blue );
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  height: 450px;
+  flex-direction: column;
+  margin: 20px;
+  min-width: 300px;
+
+  .baseball-card-img {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    width: 100%;
+  }
+}
+
+.baseball-card-header {
+  background-color: $yankees-blue;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.baseball-players {
+  display: flex;
+  flex-wrap: nowrap;
+}
