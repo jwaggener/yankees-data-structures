@@ -31,7 +31,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
-      templateParameters: { 'title': 'HELLO WORLD' }
+      templateParameters: { 'title': 'YANKEES AND DATA STRUCTURES' }
     }),
     new CopyWebpackPlugin([
       {from:'src/images',to:'images'}

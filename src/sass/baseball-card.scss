@@ -29,3 +29,46 @@
   display: flex;
   flex-wrap: nowrap;
 }
+
+.baseball-player-stat-container {
+  display: inline-block;
+}
+
+.baseball-player-stat {
+  @include box-shadow(2px, 2px, 5px, 0, $yankees-blue );
+  align-items: center;
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 40px;
+  display: flex;
+  max-height: 80px;
+}
+
+.baseball-player-stat-img {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid $yankees-blue;
+  border-radius: 50%;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+}
+
+.baseball-player-stat-txt {
+  font-size: 1.5rem;
+  padding: 1rem 2rem 1rem 1rem;
+}
+
+.baseball-card-stats-table-container {
+  background: white;
+  position: absolute;
+}
+
+.baseball-card-stats-table{
+  font-size: 2rem;
+
+  td {
+    padding-left: 60px;
+  }
+}
