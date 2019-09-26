@@ -7,6 +7,8 @@
   flex-direction: column;
   margin: 20px;
   min-width: 300px;
+  overflow: hidden;
+  position: relative;
 
   .baseball-card-img {
     background-position: 50% 50%;
@@ -62,13 +64,17 @@
 
 .baseball-card-stats-table-container {
   background: white;
+  height: 370px;
+  opacity: 0;
   position: absolute;
+  top: 80px;
+  width: 100%;
+
+  &:hover{
+    opacity: 1;
+  }
 }
 
 .baseball-card-stats-table{
   font-size: 2rem;
-
-  td {
-    padding-left: 60px;
-  }
 }

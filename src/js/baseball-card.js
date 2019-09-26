@@ -26,6 +26,9 @@ const BaseballCard = (props) => {
       <div className="baseball-card">
         <div className="baseball-card-header">{props.player.name}</div>
         <div className="baseball-card-img" style={style} ></div>
+        <div className="baseball-card-stats-table-container">
+          <BaseballCardStatTable player={props.player}/>
+        </div>
       </div>
     </div>);
 }
