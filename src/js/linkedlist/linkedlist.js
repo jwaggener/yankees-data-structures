@@ -1,7 +1,6 @@
 import BaseballCard from "../baseball-card";
 import LLControls from "./controls";
 import React from "react";
-import Scroller from "../scroller";
 import { add, linkedlist } from "../structures/linked-list";
 
 const LinkedList = (props) => {
@@ -14,11 +13,9 @@ const LinkedList = (props) => {
 
   return <div className="linkedlist">
     <LLControls players={props.players} />
-    <Scroller>
-      <div className="baseball-players">
-        {props.players.map(player => <BaseballCard key={player.name} player={player} />)}
-      </div>
-    </Scroller>
+    <div className="container">
+      {props.players.map(player => <BaseballCard key={player.name} player={player} />)}
+    </div>
   </div>;
 }
 

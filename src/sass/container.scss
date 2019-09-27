@@ -1,5 +1,19 @@
 .container {
-  @include box-shadow(3px, 3px, 8px, 0, $YANKEES_BLUE );
-  border: 2px solid $YANKEES_BLUE;
-  border-radius: 12px;
+  display: flex;
+  margin: 10px;
+  padding: 15px;
+
+  &.decorated {
+    @include box-shadow(3px, 3px, 8px, 0, $YANKEES_BLUE );
+    background: white;
+    border: 2px solid $YANKEES_BLUE;
+    border-radius: 12px;
+  }
+}
+
+// small screens
+@media all and (max-width: 500px) {
+  .container {
+    flex-direction: column;
+  }
 }

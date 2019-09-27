@@ -1,25 +1,25 @@
 .menu {
   margin-left: 20px;
   overflow: visible;
-  position: absolute;
-  z-index: 1;
 }
 
 .menu-toggle {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 ul.menu-dropdown {
   @include transition(opacity $ANIMATION_LENGTH);
   background: $YANKEES_BLUE;
   color: white;
-  font-size: 1.8rem;
+  font-size: 1rem;
   list-style: none;
-  margin: 0;
+  margin: -5px 0;
   opacity: 0;
   padding: 0;
+  position: absolute;
   visibility: hidden;
+  z-index: 1;
 
   &.open {
     opacity: 1;
@@ -36,5 +36,24 @@ ul.menu-dropdown {
     &:hover{
       background-color: $YANKEES-HILIGHT;
     }
+  }
+}
+
+// small screens
+@media all and (max-width: 500px) {
+  .menu {
+    margin-left: 0;
+    width: 100%;
+
+    .menu-toggle {
+      display: none;
+    }
+  }
+
+  ul.menu-dropdown {
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    visibility: visible;
   }
 }

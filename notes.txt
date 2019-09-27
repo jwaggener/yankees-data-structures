@@ -1,4 +1,7 @@
-H Hits
+Use Material to make it responsive. Now that you have a place to push the files publicly on the web, design for mobile first.
+https://material-ui.com/components/grid/
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
 HR Homeruns
 BA Batting Average
 RBI Runs Batted In

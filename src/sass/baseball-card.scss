@@ -2,13 +2,18 @@
   @include box-shadow(3px, 3px, 8px, 0, $YANKEES_BLUE );
   background: white;
   border-radius: 5px;
+  cursor: pointer;
   display: flex;
-  height: 450px;
+  height: 300px;
   flex-direction: column;
   margin: 20px;
-  min-width: 300px;
+  min-width: 200px;
   overflow: hidden;
   position: relative;
+
+  &:hover {
+    @include box-shadow(3px, 3px, 14px, 0, $YANKEES_RED );
+  }
 
   .baseball-card-img {
     background-position: 50% 50%;
@@ -22,14 +27,9 @@
 .baseball-card-header {
   background-color: $YANKEES_BLUE;
   color: white;
-  font-size: 2rem;
-  padding: 1rem;
+  font-size: 1.5rem;
+  padding: .4rem;
   text-align: center;
-}
-
-.baseball-players {
-  display: flex;
-  flex-wrap: nowrap;
 }
 
 .baseball-player-stat-container {
@@ -54,14 +54,13 @@
   border: 1px solid $YANKEES_BLUE;
   border-radius: 50%;
   display: inline-block;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
+}
 
-  &.card{
-    margin-left: -35px;
-    margin-top: -103px;
-    position: absolute;
-  }
+.baseball-player-stat-img-container {
+  display: flex;
+  justify-content: center;
 }
 
 .baseball-player-stat-txt {
@@ -72,22 +71,25 @@
 .baseball-card-stats-table-container {
   @include transition(opacity $ANIMATION_LENGTH);
   background: white;
-  height: 370px;
+  display: flex;
+  flex-direction: column;
+  height: 260px;
+  justify-content: center;
   opacity: 0;
-  padding: 75px 0 30px 40px;
   position: absolute;
-  top: 80px;
+  top: 40px;
   width: 100%;
 
   table {
+    padding: 0 30px;
     width: 100%;
   }
 
-  &:hover{
-    opacity: 1;
-  }
+  // &:hover {
+    // opacity: 1;
+  // }
 }
 
 .baseball-card-stats-table{
-  font-size: 2rem;
+  font-size: 1.2rem;
 }

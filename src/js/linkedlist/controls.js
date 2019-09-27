@@ -13,16 +13,18 @@ const LLControls = (props) => {
 
   const _players = filterPlayers(props.players, searchStr);
 
-  return <div className="yankees-controls" >
-    <input
-      type="text"
-      value={searchStr}
-      onChange={onTextChange}
-      placeholder="Type a Name"
-      />
-    {_players.map(
-      player => <button key={`${player.name}-filter`} onClick={onClick(player)} className="player-btn" >{player.name}</button>
-    )}
+  return <div className="container decorated">
+      <div className="yankees-controls" >
+      <input
+        type="text"
+        value={searchStr}
+        onChange={onTextChange}
+        placeholder="Type a Name"
+        />
+      {_players.map(
+        player => <button key={`${player.name}-filter`} onClick={onClick(player)} className="player-btn" >{player.name}</button>
+      )}
+    </div>
   </div>;
 }
 

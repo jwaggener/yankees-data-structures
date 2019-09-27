@@ -4,7 +4,6 @@ import LinkedList from "./linkedlist/linkedlist";
 import Players from "./data/yankees";
 import PlayerStat from "./player-stat";
 import React, { useState } from "react";
-import Scroller from "./scroller";
 import { state, stateObserver } from "./state";
 
 const Yankees = () => {
@@ -26,11 +25,11 @@ function getYankees(view){
       return <LinkedList players={Players.players} />;
 
     default:
-      return (<Scroller>
-        <div className="baseball-players">
+      return (
+        <div className="container">
           {Players.players.map(player => <BaseballCard key={player.name} player={player} />)}
         </div>
-      </Scroller>);
+      );
   }
 }
 
