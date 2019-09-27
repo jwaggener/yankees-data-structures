@@ -1,17 +1,15 @@
 .yankees-header {
-  @include box-shadow(3px, 3px, 8px, 0, $yankees-blue )
   background-color: white;
-  border: 2px solid $yankees-blue;
-  border-radius: 12px;
+  border-bottom: 2px solid $YANKEES_RED;
   display: flex;
-  font-size: 3rem;
-  line-height: 7rem;
+  font-size: 2rem;
+  line-height: 3rem;
   /*margin-left: 25px;*/
   padding: 15px;
 
   img {
-    height: 120px;
+    height: 70px;
     margin-right: 20px;
-    width: 120px;
+    width: 70px;
   }
 }

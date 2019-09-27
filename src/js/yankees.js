@@ -1,5 +1,6 @@
-import BaseballCard, {BaseballCardStatTable} from "./baseball-card";
+import BaseballCard from "./baseball-card";
 import Header from "./header";
+import LinkedList from "./linkedlist/linkedlist";
 import Players from "./data/yankees";
 import PlayerStat from "./player-stat";
 import React, { useState } from "react";
@@ -14,17 +15,23 @@ const Yankees = () => {
 
   return <div>
     <Header />
-    <Scroller>
-      <div className="baseball-players">
-        {Players.players.map(player => <BaseballCard key={player.name} player={player} />)}
-      </div>
-      <div>
-        <PlayerStat player={Players.players[0]} />
-        <PlayerStat player={Players.players[1]} />
-        <PlayerStat player={Players.players[2]} />
-      </div>
-    </Scroller>
+    {getYankees(state.getState().structure)}
+    {Players.players.map(player => <PlayerStat key={player.name} player={player} />)}
   </div>
 };
+
+function getYankees(view){
+  switch(view){
+    case "Linked List":
+      return <LinkedList players={Players.players} />;
+
+    default:
+      return (<Scroller>
+        <div className="baseball-players">
+          {Players.players.map(player => <BaseballCard key={player.name} player={player} />)}
+        </div>
+      </Scroller>);
+  }
+}
 
 export default Yankees;

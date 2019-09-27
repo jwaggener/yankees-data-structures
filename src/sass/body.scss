@@ -1,15 +1,16 @@
-$yankees-blue: #001b42;
-$yankees-hilight: #044cb4;
-
 body {
   background: repeating-linear-gradient(
     90deg,
     white,
     white 80px,
-    $yankees-blue 80px,
-    $yankees-blue 82px
+    $YANKEES_BLUE 80px,
+    $YANKEES_BLUE 82px
   );
   font-family: Helvetica, "Helvetica Neue", 'sans-serif';
   font-size: 10px;
-  padding: 30px;
+
+}
+
+div {
+  box-sizing: border-box;
 }
