@@ -41,7 +41,7 @@ export function Subject (state) {
   }
 
   const setState = (s) => {
-    _state = memo(s);
+    _state = memo(Object.assign(_state, s));
     notifyObservers(_state);
   }
 

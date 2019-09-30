@@ -29,9 +29,7 @@ const BaseballCard = (props) => {
   const style = {backgroundImage: `url(${props.player.img})`},
     styleStatTable = {opacity: showStats ? 1 : 0};
 
-  return (
-    <div>
-      <div className="baseball-card" onClick={onToggle}>
+  return <div className="baseball-card" onClick={onToggle}>
         <div className="baseball-card-header">{props.player.name}</div>
         <div className="baseball-card-img" style={style} ></div>
         <div className="baseball-card-stats-table-container" style={styleStatTable}>
@@ -40,8 +38,7 @@ const BaseballCard = (props) => {
           </div>
           <BaseballCardStatTable player={props.player} />
         </div>
-      </div>
-    </div>);
+      </div>;
 }
 
 export default BaseballCard;

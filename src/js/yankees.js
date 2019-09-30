@@ -1,4 +1,5 @@
 import BaseballCard from "./baseball-card";
+import classnames from "classnames";
 import Header from "./header";
 import LinkedList from "./linkedlist/linkedlist";
 import Players from "./data/yankees";
@@ -12,7 +13,12 @@ const Yankees = () => {
 
   stateObserver.subscribe(setLocalState);
 
-  return <div>
+  const classes = classnames(
+    "yankees-and-data-structures",
+    {"dim": localState.dim}
+  );
+
+  return <div className={classes}>
     <Header />
     {getYankees(state.getState().structure)}
     {Players.players.map(player => <PlayerStat key={player.name} player={player} />)}

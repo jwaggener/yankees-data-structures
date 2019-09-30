@@ -3,6 +3,7 @@
   margin: 10px;
   overflow-x: scroll;
   padding: 15px;
+  transition: margin 2s;
 
   &.decorated {
     @include box-shadow(3px, 3px, 8px, 0, $YANKEES_BLUE );

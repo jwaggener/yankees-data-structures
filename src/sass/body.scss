@@ -11,6 +11,16 @@ body {
 
 }
 
+.dim {
+  background: repeating-linear-gradient(
+    90deg,
+    gray,
+    gray 80px,
+    $YANKEES_BLUE 80px,
+    $YANKEES_BLUE 82px
+  );
+}
+
 div {
   box-sizing: border-box;
 }
