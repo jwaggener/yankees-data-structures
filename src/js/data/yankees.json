@@ -36,6 +36,42 @@
       "RBI": "77",
       "SLG": ".531",
       "WAR": "3.2"
+    },
+    {
+      "name": "Gleyber Torres",
+      "age": "22",
+      "BA": ".280",
+      "H": "152",
+      "HR": "38",
+      "img": "images/torres-gleyber.png",
+      "OBP": ".338",
+      "RBI": "90",
+      "SLG": ".538",
+      "WAR": "4.0"
+    },
+    {
+      "name": "Gio Urshela",
+      "age": "27",
+      "BA": ".315",
+      "H": "139",
+      "HR": "21",
+      "img": "images/urshela-gio.png",
+      "OBP": ".356",
+      "RBI": "74",
+      "SLG": ".535",
+      "WAR": "3.3"
+    },
+    {
+      "name": "Cameron Maybin",
+      "age": "32",
+      "BA": ".288",
+      "H": "68",
+      "HR": "11",
+      "img": "images/maybin-cameron.png",
+      "OBP": ".368",
+      "RBI": "32",
+      "SLG": ".500",
+      "WAR": "1.6"
     }
   ]
 }

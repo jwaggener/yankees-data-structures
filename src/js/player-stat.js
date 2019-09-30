@@ -9,7 +9,7 @@ const PlayerStat = (props) => {
   return <div className="baseball-player-stat-container">
     <div className="baseball-player-stat">
       <span className="baseball-player-stat-img" style={style}></span>
-      <span className="baseball-player-stat-txt">{`WAR: ${props.player.WAR}`}</span>
+      <span className="baseball-player-stat-txt">{`HR: ${props.player.HR}`}</span>
     </div>
   </div>
 }

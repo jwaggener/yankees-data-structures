@@ -1,6 +1,7 @@
 .container {
   display: flex;
   margin: 10px;
+  overflow-x: scroll;
   padding: 15px;
 
   &.decorated {
