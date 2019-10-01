@@ -53,6 +53,18 @@ export function add(element, list) {
   list.size++;
 };
 
+export function findNodeByKey(key){
+  let _curr = list.head;
+
+  while(_curr.next){
+    if(_curr.element.key === key){
+      return _curr;
+    }
+    _curr = _curr.next;
+  }
+  return null;
+}
+
 // inserts an element at an index
 export function insertAt(element, index, list) {
   // if the index is larger then the size, return false

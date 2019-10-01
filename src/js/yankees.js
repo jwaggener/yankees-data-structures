@@ -13,9 +13,11 @@ const Yankees = () => {
 
   stateObserver.subscribe(setLocalState);
 
+  const structure = state.getState().structure;
+
   const classes = classnames(
     "yankees-and-data-structures",
-    {"dim": localState.dim}
+    {"dim":  Boolean(structure) }
   );
 
   return <div className={classes}>
