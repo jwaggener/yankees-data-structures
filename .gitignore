@@ -1,3 +1,5 @@
+.DS_Store
 dist
+flex-notes.txt
 node_modules
 tmp
