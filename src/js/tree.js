@@ -17,9 +17,9 @@ function tree(srcArr){
     length = Math.pow(2, spliceLengthPow);
 
     for(var j = i; j < i + length; j++){
-      if( j >= srcArr.length){
+      /*if( j >= srcArr.length){
         break;
-      }
+      }*/
       nodesArr2.push( treeNode(srcArr[j]) );
     }
 
@@ -37,6 +37,7 @@ function tree(srcArr){
 }
 
 function treeNode(item) {
+  console.log("item", item);
   return <span className="tree-node" >{item}</span>;
 }
 

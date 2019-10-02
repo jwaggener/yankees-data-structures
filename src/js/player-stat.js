@@ -6,7 +6,7 @@ const PlayerStat = (props) => {
     backgroundImage: `url(${props.player.img})`
   };
 
-  return <div className="baseball-player-stat-container">
+  return <div id={`${props.player.name}-stat`.replace(" ", "-").toLowerCase()} className="baseball-player-stat-container">
     <div className="baseball-player-stat">
       <span className="baseball-player-stat-img" style={style}></span>
       <span className="baseball-player-stat-txt">{`HR: ${props.player.HR}`}</span>

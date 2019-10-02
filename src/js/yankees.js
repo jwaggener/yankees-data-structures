@@ -1,10 +1,11 @@
 import BaseballCard from "./baseball-card";
+import { boundingRects } from "./bounding-rects";
 import classnames from "classnames";
 import Header from "./header";
 import LinkedList from "./linkedlist/linkedlist";
 import Players from "./data/yankees";
 import PlayerStat from "./player-stat";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { state, stateObserver } from "./state";
 import tree from "./tree";
 
@@ -23,9 +24,15 @@ const Yankees = () => {
 
   const playerStats = Players.players.map(player => <PlayerStat key={player.name} player={player} />);
 
-  console.log(
-    "playerStats", playerStats
-  );
+  let bRects;
+  useEffect(() => {
+    bRects = boundingRects(
+      Players.players.map( player => (`${player.name}-stat`).replace(" ", "-").toLowerCase() )
+    );
+    console.log(
+      "bRects", bRects
+    );
+  });
 
   return <div className={classes}>
     <Header />
