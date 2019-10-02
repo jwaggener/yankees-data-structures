@@ -1,6 +1,13 @@
 import React from "react";
 
-function tree(srcArr){
+// for display
+// takes an array(n)
+// and breaks the array up into base^1 base^2 base^3...
+// so base 2 is array(1) array(2) array(4) array(8)...
+// base 3 is is array(1) array(3) array(9) array(27)...
+// each array is a row with flex display properties, centered
+// which makes it display as a simlpe tree graph
+function tree(srcArr, base=2){
 
   let nodesArr = [], rowsArr = [];
 
@@ -14,12 +21,9 @@ function tree(srcArr){
   while(i < srcArr.length) {
     let nodesArr2 = [];
 
-    length = Math.pow(2, spliceLengthPow);
+    length = Math.pow(base, spliceLengthPow);
 
     for(var j = i; j < i + length; j++){
-      /*if( j >= srcArr.length){
-        break;
-      }*/
       nodesArr2.push( treeNode(srcArr[j]) );
     }
 
@@ -37,8 +41,7 @@ function tree(srcArr){
 }
 
 function treeNode(item) {
-  console.log("item", item);
-  return <span className="tree-node" >{item}</span>;
+  return <span className="tree-node" >{item || null}</span>;
 }
 
 function treeRow(item) {
@@ -46,12 +49,3 @@ function treeRow(item) {
 }
 
 export default tree;
-
-//console.log( tree(
-  //["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen"]
-//) );
-// 1
-// 2
-// 4
-// 8
-// 16

@@ -1,4 +1,4 @@
-import {memo} from "./util";
+import {immutable} from "./util";
 // subscribe - subscribe to a Subject
 // notify - for each subscriber, invoke!
 export function Observer () {
@@ -41,7 +41,7 @@ export function Subject (state) {
   }
 
   const setState = (s) => {
-    _state = memo(Object.assign(_state, s));
+    _state = immutable(Object.assign(_state, s));
     notifyObservers(_state);
   }
 

@@ -1,6 +1,11 @@
+.tree-branches {
+  position: absolute;
+  z-index: -1;
+}
+
 .tree-row {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   min-height: 90px;
 }
 

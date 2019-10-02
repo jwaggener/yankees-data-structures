@@ -21,9 +21,6 @@ const LinkedList = (props) => {
   const linkedlist = getLinkedList(props.players),
     linkedlistToArray = getLinkedListToArray(linkedlist);
 
-  console.log("linkedlist", linkedlist);
-  console.log("linkedlistToArray", linkedlistToArray);
-
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
   const styles = {marginLeft: -(WIDTH_BASEBALLCARD_WITH_MARGIN + WIDTH_NEXT)};

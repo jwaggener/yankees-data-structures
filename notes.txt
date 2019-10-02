@@ -24,6 +24,23 @@ const STYLE = {
   <line x1={X1} y1={Y1} x2={X2} y2={Y2} style={STYLE}></line>
 </svg>
 
+for a path with a cubic bezier curve
+C (or c) x1,y1 x2,y2 x,y
+<path
+  d="M100,200  C150,50  400,100  500,200"
+ fill="none" stroke="#F00" stroke-width="2px" ></path>
+</svg>
+
+// so you can take the above ^^ and in conjunction with eg
+document.getElementById("aaron-judge-stat").getBoundingClientRect()
+you can draw svg lines
+
+and use paths to add a lil curve
+https://vanseodesign.com/web-design/svg-paths-curve-commands/
+
+You'll have to decide if you're drawing one big SVG or one per row, or one per connection
+Prob easiest one big SVG. but then you'll also need the bounding rect of the whole tree to size the SVG container.
+
 React Tree Graph
 https://jpb12.github.io/react-tree-graph/
 

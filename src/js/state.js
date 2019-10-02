@@ -1,8 +1,8 @@
-import {memo} from "./util";
 import {Observer, Subject} from "./observer";
 
 export const state = Subject({
   dim: false,
+  rects: null,
   structure: null
 });
 

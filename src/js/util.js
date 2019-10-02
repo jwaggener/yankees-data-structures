@@ -1,4 +1,4 @@
-export function memo(arr){
+export function immutable(arr){
   let args = [{}];
   if(arr.length === undefined){
     args.push(arr);
