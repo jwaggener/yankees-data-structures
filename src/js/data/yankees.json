@@ -14,18 +14,6 @@
       "WAR": "5.0"
     },
     {
-      "name": "Brett Gardner",
-      "age": "36",
-      "BA": ".254",
-      "H": "121",
-      "HR": "27",
-      "img": "images/gardner-brett.png",
-      "OBP": ".330",
-      "RBI": "72",
-      "SLG": ".507",
-      "WAR": "4.2"
-    },
-    {
       "name": "Gary Sanchez",
       "age": "26",
       "BA": ".233",
@@ -72,6 +60,18 @@
       "RBI": "32",
       "SLG": ".500",
       "WAR": "1.6"
+    },
+    {
+      "name": "Brett Gardner",
+      "age": "36",
+      "BA": ".254",
+      "H": "121",
+      "HR": "27",
+      "img": "images/gardner-brett.png",
+      "OBP": ".330",
+      "RBI": "72",
+      "SLG": ".507",
+      "WAR": "4.2"
     }
   ]
 }

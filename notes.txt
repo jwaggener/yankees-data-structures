@@ -1,9 +1,14 @@
-Use Material to make it responsive. Now that you have a place to push the files publicly on the web, design for mobile first.
+You decided against Material in favor of flex css directly. It's easier
 https://material-ui.com/components/grid/
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
+Good descriptions of common regex
+https://itnext.io/regular-expressions-tricks-you-should-know-2976c7bd1be3
+
 How binary search trees work in JavaScript:
 https://medium.com/javascript-in-plain-english/binary-search-tree-in-javascript-ca5aa7ba05de
+Description of binary tree traversal
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 
 D3 with images
 http://bl.ocks.org/eesur/be2abfb3155a38be4de4

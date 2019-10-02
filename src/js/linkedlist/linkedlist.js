@@ -9,15 +9,8 @@ import { state } from "../state";
 const WIDTH_BASEBALLCARD_WITH_MARGIN = 240,
   WIDTH_NEXT = 116;
 
-// so make a linked list from the list and work from the linkedlist
-// then you can use everything from that linkedlist
-// for rendering
-// does this solve the indexing issue?
-// should we add 'selected' and 'index' to the list?
-// how should we handle re-renders?
 const LinkedList = (props) => {
 
-  // create the list with items using .next to link one player to the next
   const linkedlist = getLinkedList(props.players),
     linkedlistToArray = getLinkedListToArray(linkedlist);
 
@@ -39,6 +32,8 @@ const LinkedList = (props) => {
   </div>;
 }
 
+// instantiates a linked list and
+// adds all the players
 function getLinkedList(players) {
   const list = linkedlist();
   let i = 0;
@@ -58,6 +53,7 @@ function getLinkedListToArray(list) {
   return arr;
 }
 
+// the display for a single player
 function getPlayer(player, isSelected, last=false){
   return (<React.Fragment>
     <BaseballCard

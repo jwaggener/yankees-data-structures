@@ -9,5 +9,3 @@ export const state = Subject({
 export const stateObserver = Observer();
 
 state.registerObserver(stateObserver);
-
-stateObserver.subscribe(newState => console.log("newState", newState));
