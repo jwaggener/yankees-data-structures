@@ -8,6 +8,22 @@ https://medium.com/javascript-in-plain-english/binary-search-tree-in-javascript-
 D3 with images
 http://bl.ocks.org/eesur/be2abfb3155a38be4de4
 
+Instead look at using SVG directly. After all, you're not trying to do anything very complicated.
+https://medium.com/@PepsRyuu/why-i-no-longer-use-d3-js-b8288f306c9a
+
+const HEIGHT = 210, WIDTH = 500;
+const X1 = 0, Y1 = 0, X2 = 200, Y2 = 200;
+const STYLE = {
+  stroke: "rgb(255,0,0)",
+  strokeWidth: 2
+};
+// "stroke:rgb(255,0,0);stroke-width:2"
+// <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+<svg height={HEIGHT} width={WIDTH}>
+  <line x1={X1} y1={Y1} x2={X2} y2={Y2} style={STYLE}></line>
+</svg>
+
 React Tree Graph
 https://jpb12.github.io/react-tree-graph/
 

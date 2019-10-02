@@ -6,6 +6,7 @@ import Players from "./data/yankees";
 import PlayerStat from "./player-stat";
 import React, { useState } from "react";
 import { state, stateObserver } from "./state";
+import tree from "./tree";
 
 const Yankees = () => {
 
@@ -20,10 +21,16 @@ const Yankees = () => {
     {"dim":  Boolean(structure) }
   );
 
+  const playerStats = Players.players.map(player => <PlayerStat key={player.name} player={player} />);
+
+  console.log(
+    "playerStats", playerStats
+  );
+
   return <div className={classes}>
     <Header />
     {getYankees(state.getState().structure)}
-    {Players.players.map(player => <PlayerStat key={player.name} player={player} />)}
+    {tree(playerStats)}
   </div>
 };
 

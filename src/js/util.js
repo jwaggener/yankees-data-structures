@@ -9,3 +9,6 @@ export function memo(arr){
   }
   return Object.assign.apply({}, args);
 }
+
+// a function that can get the size of any div on resize
+// a function that will retrieve any number of items' sizes
