@@ -6,79 +6,99 @@ import { arrsToFlex,
 } from "../tree-flex";
 import { boundingRects } from "../bounding-rects";
 import { debounce } from "lodash";
+import Menu from "../menu";
 import Players from "../data/yankees";
 import PlayerStat from "../player-stat";
 import React, { useState, useEffect } from "react";
-import { state, stateObserver } from "../state";
 
-export default function BST() {
+export default function BST(props) {
+  // an array holding all the SVG paths
+  let branches;
 
-  const [localState, setLocalState] = useState(state.getState());
+  const [rectsState, setRectsState] = useState(null),
+    [metric, setMetric] = useState("HR");
 
-  stateObserver.subscribe(setLocalState);
-
-  const bst = getBST(Players.players),
+  const bst = getBST(props.players, metric),
     descr = bstToDescription(bst),
-    toFlex = arrsToFlex(constructLayout(descr, Players.players));
+    toFlex = arrsToFlex(constructLayout(descr, props.players), metric);
+
+  console.info("bst", bst);
+
+  // gets the bounding rects of the stat items, keying them by player
+  function getRects(){
+    const ids = props.players.map( player => (`${player.name}-stat`).replace(" ", "-").toLowerCase() );
+    ids.push("tree-container");
+    return boundingRects(ids);
+  }
 
   useEffect(() => {
-    const cb = debounce( () => state.setState({rects: getRects()}) );
+    const cb = debounce( () => setRectsState(getRects()) );
 
     window.addEventListener("resize", cb);
 
-    if(state.getState().rects === null){
-      state.setState({rects: getRects()});
+    if(rectsState === null){
+      setRectsState(getRects());
     }
 
     return () => window.removeEventListener("resize", cb);
   });
 
-  function toStat(key){
-    return `${key.replace(" ", "-").toLowerCase()}-stat`;
+  const onClick = (item) => {
+    setRectsState(null);
+    setMetric(item.name);
   }
 
-  let branches;
-  if(localState.rects){
-    branches = [];
-    for(var key in descr){
-      const item = descr[key];
-      if(item && item.pathsTo){
-        if(item.pathsTo[0]){
-          branches.push(getBranchLine(toStat(key), toStat(item.pathsTo[0]), localState.rects))
-        }
-        if(item.pathsTo[1]){
-          branches.push(getBranchLine(toStat(key), toStat(item.pathsTo[1]), localState.rects))
-        }
-      }
-    }
+  if(rectsState){
+    branches = generateBranches(descr, rectsState);
   }
 
-  return <div id="tree-container">
-      {branches && localState.rects && getSVG(localState.rects["tree-container"])(
-        branches
-      )}
-      <div className="tree">{toFlex}</div>
+  const menuItems = [ {name:"HR"}, {name:"BA"}, {name:"RBI"}, {name:"SLG"}, {name:"OBP"}, {name:"WAR"} ];
+
+  return <div>
+      <Menu
+      items={menuItems}
+      onClick={onClick}
+      toggleText={metric}
+      />
+      <div id="tree-container">
+        {branches && rectsState && getSVG(rectsState["tree-container"], branches)}
+        <div className="tree">{toFlex}</div>
+      </div>
     </div>;
 }
 
 // instantiates a linked list and
 // adds all the players
-function getBST(players) {
+function getBST(players, metric="HR") {
   const bst = binarySearchTree();
   players.forEach(
-    player => insert(player, "HR", bst)
+    player => insert(player, metric, bst)
   );
   return bst;
 }
 
-function getRects(){
-  const ids = Players.players.map( player => (`${player.name}-stat`).replace(" ", "-").toLowerCase() );
-  ids.push("tree-container");
-  return boundingRects(ids);
+function getSVG(br, paths){
+  return <svg className="tree-branches" width={br.width} height={br.height}>{paths}</svg>;
 }
 
-function getSVG(br){
-  return (paths) => <svg className="tree-branches" width={br.width} height={br.height}>{paths}</svg>
+function generateBranches(descr, rectsState){
+  function toStat(key){
+    return `${key.replace(" ", "-").toLowerCase()}-stat`;
+  }
+
+  let branches = [];
+  for(var key in descr){
+    const item = descr[key];
+    if(item && item.pathsTo){
+      if(item.pathsTo[0]){
+        branches.push(getBranchLine(toStat(key), toStat(item.pathsTo[0]), rectsState))
+      }
+      if(item.pathsTo[1]){
+        branches.push(getBranchLine(toStat(key), toStat(item.pathsTo[1]), rectsState))
+      }
+    }
+  }
+  return branches;
 }
 
 function getBranchLine(id1, id2, rects){

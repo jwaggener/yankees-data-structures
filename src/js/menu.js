@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 
-const Menu = (props) => {
+export default function Menu (props) {
 
   const [open, setOpen] = useState(false);
 
@@ -41,5 +41,3 @@ const Menu = (props) => {
   </div>;
 
 }
-
-export default Menu;

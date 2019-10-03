@@ -9,7 +9,6 @@ import React, { useState } from "react";
 import { state, stateObserver } from "./state";
 
 const Yankees = () => {
-
   const [localState, setLocalState] = useState(state.getState());
 
   stateObserver.subscribe(setLocalState);
@@ -24,12 +23,14 @@ const Yankees = () => {
   return <div className={classes}>
     <Header />
     {getYankees(state.getState().structure)}
-    <BST />
   </div>
 };
 
 function getYankees(view){
   switch(view){
+    case "Binary Search Tree":
+      return <BST players={Players.players} />;
+
     case "Linked List":
       return <LinkedList players={Players.players} />;
 

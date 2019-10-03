@@ -15,14 +15,17 @@ export function bstNodeToDescription(node, obj={}, level=0, position=0) {
 
   if(node === null){ return }
 
+  // if there's no entry, create one
   if(!obj[node.element.name]){
     obj[node.element.name] = {
+      // used to draw lines to the correct players
       pathsTo:[
         node.left && node.left.element.name || null,
         node.right && node.right.element.name || null
       ],
+      // this is row and position information. eg row 1, position 2
       position: [level, position]
-    }; //pathsTo
+    };
   }
 
   if(!obj["maxLevel"]){
@@ -40,6 +43,7 @@ export function bstNodeToDescription(node, obj={}, level=0, position=0) {
 }
 
 // obj - {max_num, playername: [level, position]}
+// creates arrays and positions the players
 export function constructLayout(obj, players){
   const arr = [],
     power = 1;
@@ -62,7 +66,9 @@ export function constructLayout(obj, players){
   return arr;
 }
 
-export function arrsToFlex(arr){
+// take the layout from constructLayout
+// and create the react elements
+export function arrsToFlex(arr, metric){
   const rows = [];
   let arr2, row;
   for(var i = 0; i<arr.length; i++){
@@ -71,8 +77,8 @@ export function arrsToFlex(arr){
     for(var j = 0; j < arr2.length; j++){
       const player = arr2[j];
       row.push( treeNode(
-        player ? React.createElement(PlayerStat, { player: player } ) : null
-      ) ) // make a playerstat here
+        player ? React.createElement(PlayerStat, { player, metric } ) : null
+      ) )
     }
     rows.push( treeRow(row) );
   }

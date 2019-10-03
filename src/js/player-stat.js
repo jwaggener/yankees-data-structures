@@ -9,7 +9,7 @@ const PlayerStat = (props) => {
   return <div id={`${props.player.name}-stat`.replace(" ", "-").toLowerCase()} className="baseball-player-stat-container">
     <div className="baseball-player-stat">
       <span className="baseball-player-stat-img" style={style}></span>
-      <span className="baseball-player-stat-txt">{`HR: ${props.player.HR}`}</span>
+      <span className="baseball-player-stat-txt">{`${props.metric}: ${props.player[props.metric]}`}</span>
     </div>
   </div>
 }
