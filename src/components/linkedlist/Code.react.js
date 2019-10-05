@@ -29,7 +29,6 @@ export function linkedlist() {
 export function node(element) {
   const node = {};
   node.element = element,
-  //node.previous = null; // would be a double linked list.
   node.next = null;
 
   return node;
@@ -142,5 +141,18 @@ export function removeFrom(index, list) {
   return _curr;
 };
 
-function removeElement() {return undefined};
-`;
+
+export function getIndexOfKey(key, list){
+  let _curr = list.head,
+    index = 0;
+
+  while(_curr){
+    if(_curr.element.name === key){
+      return index;
+    }
+    _curr = _curr.next;
+    index++;
+  }
+
+}
+`

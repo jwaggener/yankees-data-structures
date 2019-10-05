@@ -19,7 +19,6 @@ export function linkedlist() {
 export function node(element) {
   const node = {};
   node.element = element,
-  //node.previous = null; // would be a double linked list.
   node.next = null;
 
   return node;

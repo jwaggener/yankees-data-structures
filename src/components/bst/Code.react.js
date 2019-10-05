@@ -8,7 +8,10 @@ export default function Code (props){
 
 }
 
-const bst = `export function binarySearchTree(data){
+const bst = `// modified code found here by Sumit Ghosh:
+// https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/
+
+export function binarySearchTree(data){
   const tree = {};
   tree.root = null;
   tree.data = data;
@@ -42,16 +45,6 @@ export function insert(data, key, tree){
 // newNode - node to insert
 // key - a key on the node.element that is a value to be compared eg 'HR' for homeruns
 export function insertNode(node, newNode, key){
-  /*console.log(
-    'key', key
-  );
-  console.log("insert",
-    'newNode.element[key]',
-    newNode.element[key],
-    'node.element[key]',
-    node.element[key]
-  );
-  console.log("____");*/
   // left
   if(newNode.element[key] < node.element[key]){
 
@@ -81,7 +74,6 @@ export function remove(data, key, tree){
 }
 
 export function removeNode(node, data, key) {
-
   // if the root is null then tree is
   // empty
   if(node === null) { return null };
@@ -200,8 +192,7 @@ export function search(node, data, key) {
   return node;
 }
 
-// modified code found here by Sumit Ghosh:
-// https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/
+
 // Inorder, Preorder, Postorder
 // https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
 // print by its rows
@@ -211,4 +202,4 @@ export function search(node, data, key) {
 
 // another example considered
 // https://gist.github.com/benlesh/9128359
-`;
+`
