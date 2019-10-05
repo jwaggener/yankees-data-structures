@@ -9,7 +9,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   entry: {
-    app: './src/js/index.js',
+    app: './src/index.js',
   },
   mode: 'development',
   module: {
