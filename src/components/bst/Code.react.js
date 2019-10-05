@@ -14,7 +14,6 @@ const bst = `// modified code found here by Sumit Ghosh:
 export function binarySearchTree(data){
   const tree = {};
   tree.root = null;
-  tree.data = data;
 
   return tree;
 }

@@ -4,7 +4,6 @@
 export function binarySearchTree(data){
   const tree = {};
   tree.root = null;
-  tree.data = data;
 
   return tree;
 }
