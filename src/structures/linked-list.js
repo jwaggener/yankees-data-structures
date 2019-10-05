@@ -132,4 +132,19 @@ export function removeFrom(index, list) {
   return _curr;
 };
 
+
+export function getIndexOfKey(key, list){
+  let _curr = list.head,
+    index = 0;
+
+  while(_curr){
+    if(_curr.element.name === key){
+      return index;
+    }
+    _curr = _curr.next;
+    index++;
+  }
+
+}
+
 function removeElement() {return undefined};

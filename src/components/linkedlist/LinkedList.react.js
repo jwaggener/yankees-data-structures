@@ -1,4 +1,4 @@
-import { add, linkedlist } from "../../structures/linked-list";
+import { add, linkedlist, getIndexOfKey } from "../../structures/linked-list";
 import BaseballCard from "../BaseballCard.react";
 import Code from "./Code.react";
 import classnames from "classnames";
@@ -17,15 +17,17 @@ const LinkedList = (props) => {
 
   const [selectedPlayer, setSelectedPlayer] = useState(null);
 
-  const styles = {marginLeft: -(WIDTH_BASEBALLCARD_WITH_MARGIN + WIDTH_NEXT)};
+  const offset = selectedPlayer ? getIndexOfKey(selectedPlayer.name,linkedlist) : 0;
+
+  const styles = {marginLeft: -(offset * (WIDTH_BASEBALLCARD_WITH_MARGIN + WIDTH_NEXT))};
 
   return <div className="linkedlist">
-    <LLControls players={props.players} />
+    <LLControls onClick={setSelectedPlayer} players={props.players} />
     <div className="container" style={styles}>
       {props.players.map(
         (player, i, arr) => getPlayer(
           player,
-          player.name === selectedPlayer,
+          i <= offset,
           i === arr.length - 1
         ))
       }
