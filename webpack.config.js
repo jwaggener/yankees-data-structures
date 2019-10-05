@@ -26,7 +26,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'my-bundle.js',
+    filename: 'yankees-data-structures.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
