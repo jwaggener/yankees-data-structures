@@ -1,10 +1,10 @@
-import { add, linkedlist } from "../structures/linked-list";
+import { add, linkedlist } from "../../structures/linked-list";
 import BaseballCard from "../baseball-card";
 import classnames from "classnames";
 import LLControls from "./controls";
 import { NextGraphic } from "../graphics";
 import React, { useState } from "react";
-import { state } from "../state";
+import { state } from "../../state";
 
 const WIDTH_BASEBALLCARD_WITH_MARGIN = 240,
   WIDTH_NEXT = 116;

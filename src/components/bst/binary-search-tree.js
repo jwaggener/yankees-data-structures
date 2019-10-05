@@ -1,13 +1,13 @@
-import { binarySearchTree, insert, postorder } from "../structures/binary-search-tree";
+import { binarySearchTree, insert, postorder } from "../../structures/binary-search-tree";
 import { arrsToFlex,
   bstToDescription,
   constructLayout,
   treeToFlexLayout
-} from "../tree-flex";
+} from "../../tree-flex";
 import { boundingRects } from "../bounding-rects";
 import { debounce } from "lodash";
 import Menu from "../menu";
-import Players from "../data/yankees";
+import Players from "../../data/yankees";
 import PlayerStat from "../player-stat";
 import React, { useState, useEffect } from "react";
 

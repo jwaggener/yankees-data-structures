@@ -3,10 +3,10 @@ import BST from "./bst/binary-search-tree";
 import classnames from "classnames";
 import Header from "./header";
 import LinkedList from "./linkedlist/linkedlist";
-import Players from "./data/yankees";
+import Players from "../data/yankees";
 import PlayerStat from "./player-stat";
 import React, { useState } from "react";
-import { state, stateObserver } from "./state";
+import { state, stateObserver } from "../state";
 
 const Yankees = () => {
   const [localState, setLocalState] = useState(state.getState());

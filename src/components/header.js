@@ -1,7 +1,7 @@
-import DATA_STRUCTURES from "./const/data-structures";
+import DATA_STRUCTURES from "../const/data-structures";
 import Menu from "./menu";
 import React from "react";
-import { state } from "./state";
+import { state } from "../state";
 
 const Header = () => {
 
