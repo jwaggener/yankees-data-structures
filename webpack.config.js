@@ -34,7 +34,7 @@ module.exports = {
       templateParameters: { 'title': 'YANKEES AND DATA STRUCTURES' }
     }),
     new CopyWebpackPlugin([
-      {from:'src/images',to:'images'}
+      {from:'src/data/images',to:'images'}
     ]),
   ]
 };
