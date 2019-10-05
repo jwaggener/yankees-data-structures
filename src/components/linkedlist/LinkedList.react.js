@@ -21,6 +21,10 @@ const LinkedList = (props) => {
 
   const styles = {marginLeft: -(offset * (WIDTH_BASEBALLCARD_WITH_MARGIN + WIDTH_NEXT))};
 
+  function advancePlayer(player){
+    return () => { setSelectedPlayer(player)};
+  }
+
   return <div className="linkedlist">
     <LLControls onClick={setSelectedPlayer} players={props.players} />
     <div className="container" style={styles}>
@@ -28,7 +32,8 @@ const LinkedList = (props) => {
         (player, i, arr) => getPlayer(
           player,
           i <= offset,
-          i === arr.length - 1
+          i === 0,
+          advancePlayer(player)
         ))
       }
     </div>
@@ -58,13 +63,13 @@ function getLinkedListToArray(list) {
 }
 
 // the display for a single player
-function getPlayer(player, isSelected, last=false){
+function getPlayer(player, isSelected, first=false, advancePlayer){
   return (<React.Fragment>
+    {!first && <NextGraphic onClick={advancePlayer} />}
     <BaseballCard
     classNames={classnames({dim:!isSelected})}
     key={player.name}
     player={player} />
-    {!last && <NextGraphic />}
   </React.Fragment>);
 }
 
