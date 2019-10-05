@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function Code (props){
 
-  return <pre><code>{ll}</code></pre>;
+  useEffect(() => Prism.highlightAll());
+
+  return <pre><code className="language-javascript">{ll}</code></pre>;
 
 }
 

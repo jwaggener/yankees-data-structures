@@ -6,6 +6,7 @@ import { arrsToFlex,
 } from "../../tree-flex";
 import { boundingRects } from "../../bounding-rects";
 import { debounce } from "lodash";
+import Code from "./Code.react";
 import Menu from "../Menu.react";
 import Players from "../../data/yankees";
 import PlayerStat from "../PlayerStat.react";
@@ -64,6 +65,7 @@ export default function BST(props) {
         {branches && rectsState && getSVG(rectsState["tree-container"], branches)}
         <div className="tree">{toFlex}</div>
       </div>
+      <Code />
     </div>;
 }
 

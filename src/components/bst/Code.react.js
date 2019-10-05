@@ -1,4 +1,14 @@
-export function binarySearchTree(data){
+import React, { useEffect } from "react";
+
+export default function Code (props){
+
+  useEffect(() => Prism.highlightAll());
+
+  return <pre><code className="language-javascript">{bst}</code></pre>;
+
+}
+
+const bst = `export function binarySearchTree(data){
   const tree = {};
   tree.root = null;
   tree.data = data;
@@ -201,3 +211,4 @@ export function search(node, data, key) {
 
 // another example considered
 // https://gist.github.com/benlesh/9128359
+`;

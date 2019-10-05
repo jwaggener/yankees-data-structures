@@ -34,7 +34,9 @@ module.exports = {
       templateParameters: { 'title': 'YANKEES AND DATA STRUCTURES' }
     }),
     new CopyWebpackPlugin([
-      {from:'src/data/images',to:'images'}
+      {from:'src/data/images',to:'images'},
+      {from:'src/styles/prism.css',to:'prism.css'},
+      {from:'src/prism.js',to:'prism.js'}
     ]),
   ]
 };
