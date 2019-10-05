@@ -5,7 +5,7 @@ import {
   linkedlist,
   node,
   removeFrom
-} from "../linked-list";
+} from "../LinkedList";
 
 describe("linkedlist", () => {
 

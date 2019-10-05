@@ -1,8 +1,8 @@
 import { add, linkedlist } from "../../structures/linked-list";
-import BaseballCard from "../baseball-card";
+import BaseballCard from "../BaseballCard.react";
 import classnames from "classnames";
-import LLControls from "./controls";
-import { NextGraphic } from "../graphics";
+import LLControls from "./Controls.react";
+import { NextGraphic } from "../graphics.react";
 import React, { useState } from "react";
 import { state } from "../../state";
 

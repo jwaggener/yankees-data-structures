@@ -4,11 +4,11 @@ import { arrsToFlex,
   constructLayout,
   treeToFlexLayout
 } from "../../tree-flex";
-import { boundingRects } from "../bounding-rects";
+import { boundingRects } from "../../bounding-rects";
 import { debounce } from "lodash";
-import Menu from "../menu";
+import Menu from "../Menu.react";
 import Players from "../../data/yankees";
-import PlayerStat from "../player-stat";
+import PlayerStat from "../PlayerStat.react";
 import React, { useState, useEffect } from "react";
 
 export default function BST(props) {

@@ -1,4 +1,4 @@
-import PlayerStat from "./components/player-stat";
+import PlayerStat from "./components/PlayerStat.react";
 import React from "react";
 
 // take a binary search tree structure and convert it to

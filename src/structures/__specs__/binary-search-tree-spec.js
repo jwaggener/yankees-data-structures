@@ -10,7 +10,7 @@ import {
   postorder,
   findMinNode,
   search
-} from "../binary-search-tree";
+} from "../BinarySearchTree";
 
 describe("Binary Search Tree", () => {
 

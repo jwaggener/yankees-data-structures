@@ -1,10 +1,10 @@
-import BaseballCard from "./baseball-card";
-import BST from "./bst/binary-search-tree";
+import BaseballCard from "./BaseballCard.react";
+import BST from "./bst/BinarySearchTree.react";
 import classnames from "classnames";
-import Header from "./header";
-import LinkedList from "./linkedlist/linkedlist";
+import Header from "./Header.react";
+import LinkedList from "./linkedlist/linkedlist.react";
 import Players from "../data/yankees";
-import PlayerStat from "./player-stat";
+import PlayerStat from "./PlayerStat.react";
 import React, { useState } from "react";
 import { state, stateObserver } from "../state";
 

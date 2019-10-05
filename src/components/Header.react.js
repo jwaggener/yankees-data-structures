@@ -1,5 +1,5 @@
 import DATA_STRUCTURES from "../const/data-structures";
-import Menu from "./menu";
+import Menu from "./Menu.react";
 import React from "react";
 import { state } from "../state";
 
