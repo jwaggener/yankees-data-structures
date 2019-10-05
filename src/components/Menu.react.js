@@ -36,7 +36,9 @@ export default function Menu (props) {
   return <div className="menu" ref={node}>
     <button onClick={onToggle} className="menu-toggle" >{props.toggleText}</button>
     <ul className={classes}>
-      {props.items.map( item => <li key={item.name} onClick={getOnClick(item)} ><span>{item.name}</span></li> )}
+      {props.items.map(
+        item => <li key={item.name} className={classnames({disabled:item.disabled})} onClick={getOnClick(item)} ><span>{item.name}</span></li>
+      )}
     </ul>
   </div>;
 

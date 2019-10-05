@@ -33,6 +33,15 @@ ul.menu-dropdown {
     padding: 5px 15px;
     white-space: nowrap;
 
+    &.disabled{
+      background: $YANKEES_OFFWHITE;
+      color: LightGray;
+
+      &:hover{
+        background-color: $YANKEES_OFFWHITE;
+      }
+    }
+
     &:hover{
       background-color: $YANKEES-HILIGHT;
     }
