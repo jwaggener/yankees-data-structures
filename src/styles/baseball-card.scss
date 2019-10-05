@@ -41,13 +41,14 @@
 }
 
 .baseball-player-stat {
-  @include box-shadow(2px, 2px, 5px, 0, $YANKEES_BLUE );
+
   align-items: center;
-  background-color: white;
-  border: 1px solid gray;
+
+
   border-radius: 40px;
   display: flex;
-  max-height: 80px;
+  flex-direction: column;
+
 }
 
 .baseball-player-stat-img {
@@ -58,8 +59,12 @@
   border: 1px solid $YANKEES_BLUE;
   border-radius: 50%;
   display: inline-block;
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
+
+  &.card{
+    margin-top: -10px;
+  }
 }
 
 .baseball-player-stat-img-container {
@@ -68,8 +73,9 @@
 }
 
 .baseball-player-stat-txt {
-  font-size: 1.5rem;
-  padding: 1rem 2rem 1rem 1rem;
+  background-color: white;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .baseball-card-stats-table-container {
