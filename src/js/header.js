@@ -1,4 +1,4 @@
-import DATA_STRUCTURES from "./constants/data-structures";
+import DATA_STRUCTURES from "./const/data-structures";
 import Menu from "./menu";
 import React from "react";
 import { state } from "./state";
