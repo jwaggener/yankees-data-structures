@@ -62,3 +62,5 @@ September 24, 2019
 
 Use async and await where needed
 https://javascript.info/async-await
+
+import "regenerator-runtime/runtime";

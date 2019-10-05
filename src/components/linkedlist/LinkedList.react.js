@@ -6,6 +6,8 @@ import { NextGraphic } from "../graphics.react";
 import React, { useState } from "react";
 import { state } from "../../state";
 
+import Code from "./Code.react";
+
 const WIDTH_BASEBALLCARD_WITH_MARGIN = 240,
   WIDTH_NEXT = 116;
 
@@ -29,6 +31,7 @@ const LinkedList = (props) => {
         ))
       }
     </div>
+    <Code />
   </div>;
 }
 
