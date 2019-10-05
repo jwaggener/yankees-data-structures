@@ -7,6 +7,7 @@ import Players from "../data/yankees";
 import PlayerStat from "./PlayerStat.react";
 import React, { useState } from "react";
 import { state, stateObserver } from "../state";
+import Signature from "./Signature.react";
 
 const Yankees = () => {
   const [localState, setLocalState] = useState(state.getState());
@@ -23,6 +24,7 @@ const Yankees = () => {
   return <div className={classes}>
     <Header />
     {getYankees(state.getState().structure)}
+    <Signature />
   </div>
 };
 

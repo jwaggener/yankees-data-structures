@@ -1,0 +1,34 @@
+.signature {
+  @include box-shadow(3px, 3px, 8px, 0, $YANKEES_BLUE );
+  @include transition(width .25s);
+  background: $YANKEES_OFFWHITE;
+  border: 2px solid $YANKEES_BLUE;
+  border-radius: 35px;
+  bottom: 10px;
+  display: flex;
+  overflow-x: hidden;
+  position: fixed;
+  right: 10px;
+  width: 200px;
+
+  &:hover {
+    @include box-shadow(3px, 3px, 8px, 0, $YANKEES_RED );
+  }
+
+  &.closed {
+    width: 70px;
+  }
+
+  .trigger {
+    cursor: pointer;
+  }
+
+  .signature-content{
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+    padding: 8px;
+    white-space: nowrap;
+  }
+}
