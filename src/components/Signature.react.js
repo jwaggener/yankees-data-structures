@@ -9,12 +9,10 @@ export default function Signature(props){
   useEffect(function(){
     setTimeout(() => {
       if(initial){
-        if(initial){
-          setInitial(false);
-          setSigClosed(true);
-        }
+        setInitial(false);
+        setSigClosed(true);
       }
-    }, 10000)
+    }, 2000)
   });
 
   function onToggle(){
