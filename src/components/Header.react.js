@@ -3,7 +3,7 @@ import Menu from "./Menu.react";
 import React from "react";
 import { state } from "../state";
 
-const Header = () => {
+export default function Header() {
 
   const onClick = (item) => {
     const val = state.getState().structure === item.name ? null : item.name;
@@ -24,4 +24,3 @@ const Header = () => {
         />
     </div>;
 }
-export default Header;

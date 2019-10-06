@@ -1,6 +1,6 @@
 import React from "react";
 
-const PlayerStat = (props) => {
+export default function PlayerStat(props) {
 
   const style = {
     backgroundImage: `url(${props.player.img})`
@@ -13,5 +13,3 @@ const PlayerStat = (props) => {
     </div>
   </div>
 }
-
-export default PlayerStat;

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const LLControls = (props) => {
+export default function LLControls(props) {
   const [searchStr, setSearchStr] = useState("");
 
   const onClick = (player) => {
@@ -34,5 +34,3 @@ function filterPlayers(players, searchStr){
   const regexp =  RegExp(searchStr.toLowerCase(), "i");
   return players.filter(player => regexp.test(player.name) )
 }
-
-export default LLControls;

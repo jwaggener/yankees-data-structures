@@ -9,7 +9,7 @@ import React, { useState } from "react";
 import { state, stateObserver } from "../state";
 import Signature from "./Signature.react";
 
-const Yankees = () => {
+export default function Yankees() {
   const [localState, setLocalState] = useState(state.getState());
 
   stateObserver.subscribe(setLocalState);
@@ -44,5 +44,3 @@ function getYankees(view){
       );
   }
 }
-
-export default Yankees;

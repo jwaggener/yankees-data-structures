@@ -10,7 +10,7 @@ import { state } from "../../state";
 const WIDTH_BASEBALLCARD_WITH_MARGIN = 240,
   WIDTH_NEXT = 116;
 
-const LinkedList = (props) => {
+export default function LinkedList(props) {
 
   const linkedlist = getLinkedList(props.players),
     linkedlistToArray = getLinkedListToArray(linkedlist);
@@ -72,5 +72,3 @@ function getPlayer(player, isSelected, first=false, advancePlayer){
     player={player} />
   </React.Fragment>);
 }
-
-export default LinkedList;

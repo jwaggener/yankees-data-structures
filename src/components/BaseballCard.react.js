@@ -1,7 +1,8 @@
 import classnames from "classnames";
 import React, { useState } from "react";
 
-export const BaseballCardStatTable = (props) => {
+function BaseballCardStatTable(props) {
+
   const rs = [],
     remove = ["age", "name", "img"];
 
@@ -18,7 +19,7 @@ export const BaseballCardStatTable = (props) => {
   </table>;
 }
 
-const BaseballCard = (props) => {
+export default function BaseballCard(props) {
 
   const [showStats, setShowStats] = useState(false);
 
@@ -40,5 +41,3 @@ const BaseballCard = (props) => {
         </div>
       </div>;
 }
-
-export default BaseballCard;
