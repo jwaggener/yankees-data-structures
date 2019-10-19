@@ -1,5 +1,6 @@
 .container {
   align-items: center;
+  animation: .25s ease-out 0s 1 fadeIn;
   display: flex;
   margin: 10px;
   overflow-x: scroll;
@@ -18,5 +19,14 @@
 @media all and (max-width: 500px) {
   .container {
     flex-direction: column;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

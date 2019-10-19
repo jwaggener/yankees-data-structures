@@ -64,3 +64,5 @@ Use async and await where needed
 https://javascript.info/async-await
 
 import "regenerator-runtime/runtime";
+
+React-Spring - for animations?

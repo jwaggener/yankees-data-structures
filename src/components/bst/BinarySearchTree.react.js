@@ -56,11 +56,13 @@ export default function BST(props) {
   const menuItems = [ {name:"HR"}, {name:"BA"}, {name:"RBI"}, {name:"SLG"}, {name:"OBP"}, {name:"WAR"} ];
 
   return <div>
-      <Menu
-      items={menuItems}
-      onClick={onClick}
-      toggleText={metric}
-      />
+      <div className="container decorated">
+        <Menu
+        items={menuItems}
+        onClick={onClick}
+        toggleText={metric}
+        />
+      </div>
       <div id="tree-container">
         {branches && rectsState && getSVG(rectsState["tree-container"], branches)}
         <div className="tree">{toFlex}</div>

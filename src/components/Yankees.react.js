@@ -1,3 +1,5 @@
+import { DndProvider } from 'react-dnd'
+import HTML5Backend from 'react-dnd-html5-backend'
 import BaseballCard from "./BaseballCard.react";
 import BST from "./bst/BinarySearchTree.react";
 import classnames from "classnames";
@@ -23,7 +25,9 @@ export default function Yankees() {
 
   return <div className={classes}>
     <Header />
-    {getYankees(state.getState().structure)}
+    <DndProvider backend={HTML5Backend}>
+      {getYankees(state.getState().structure)}
+    </DndProvider>
     <Signature />
   </div>
 };
