@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "d3": "^5.12.0",
+    "d3": "^7.6.1",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dnd": "^9.4.0",
